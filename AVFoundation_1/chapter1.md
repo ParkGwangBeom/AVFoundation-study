@@ -44,10 +44,10 @@ Audio Playback and Recording
 
 ### Digital Media Sampling
 - 미디어를 디지털화 할 때 두 가지 기본 유형의 샘플링이 사용한다.
-1. 시간 샘플링 : 시간 경과에 따른 신호의 변화를 캡쳐 <녹음을 할때 피치와 음량의 연속적인 변화를 캡쳐>
-2. 공간 샘플링 : 사진이나 다른 시각적 매체를 디지털화 할 때 사용
+  1. 시간 샘플링 : 시간 경과에 따른 신호의 변화를 캡쳐 <녹음을 할때 피치와 음량의 연속적인 변화를 캡쳐>
+  2. 공간 샘플링 : 사진이나 다른 시각적 매체를 디지털화 할 때 사용
 
-Understanding Audio Sampling
+### Understanding Audio Sampling
 
 
 ### Digital Media Compression
