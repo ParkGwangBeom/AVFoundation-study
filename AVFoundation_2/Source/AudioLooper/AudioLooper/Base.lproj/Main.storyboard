@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OS7-wn-BS9">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="nSE-ro-DZa">
+            <objects>
+                <viewController id="OS7-wn-BS9" customClass="MainViewController" customModule="AudioLooper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gDo-Z0-THz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vym-nf-TCp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O9V-LF-f3k">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIC-60-PSf" userLabel="Play Button" customClass="THPlayButton">
+                                <rect key="frame" x="466" y="43" width="72" height="72"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="YpE-2K-XBE"/>
+                                    <constraint firstAttribute="height" constant="72" id="ZEq-uG-JuC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="play:" destination="OS7-wn-BS9" eventType="touchUpInside" id="tms-yH-pgJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jf-Fv-9Cg" userLabel="Play Label">
+                                <rect key="frame" x="486" y="116" width="32" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Dl-bs-G6D" userLabel="Rate Button" customClass="THGreenControlKnob">
+                                <rect key="frame" x="462" y="199" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="NVl-pU-wTr"/>
+                                    <constraint firstAttribute="width" constant="80" id="bfE-15-BNS"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="adjustRate:" destination="OS7-wn-BS9" eventType="valueChanged" id="8DM-4G-MDq"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSH-58-dAu" userLabel="Rate Label">
+                                <rect key="frame" x="485" y="280" width="34" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nY2-0g-orK" userLabel="Dark Container View">
+                                <rect key="frame" x="0.0" y="0.0" width="442" height="320"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="guitar" translatesAutoresizingMaskIntoConstraints="NO" id="a4J-mr-yka" userLabel="Guitar Image View">
+                                        <rect key="frame" x="25" y="20" width="80" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="VvS-SX-Wmg"/>
+                                            <constraint firstAttribute="height" constant="60" id="d6T-4L-q8o"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3u-Hv-W1p" userLabel="Guitar Pan Label">
+                                        <rect key="frame" x="35" y="176" width="60" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Volume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYa-up-tDB" userLabel="Guitar Volume Label">
+                                        <rect key="frame" x="33" y="271" width="64" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bass" translatesAutoresizingMaskIntoConstraints="NO" id="jJt-7q-TEK" userLabel="Bass Image View">
+                                        <rect key="frame" x="181" y="24" width="80" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="7uC-3N-ceP"/>
+                                            <constraint firstAttribute="height" constant="51" id="Fzk-Er-sm0"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nI1-vn-r2h" userLabel="Bass Pan Label">
+                                        <rect key="frame" x="191" y="176" width="60" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="nnE-Mr-DAJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Volume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCC-9T-ErO" userLabel="Bass Volume Label">
+                                        <rect key="frame" x="191" y="271" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="drum" translatesAutoresizingMaskIntoConstraints="NO" id="mZo-Gr-mKM" userLabel="Drums Image View">
+                                        <rect key="frame" x="332" y="29" width="80" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Gac-5k-CIj"/>
+                                            <constraint firstAttribute="width" constant="80" id="vrj-7q-NDt"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0j-08-sre" userLabel="Drums Pan Label">
+                                        <rect key="frame" x="342" y="176" width="60" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Volume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njc-hg-O3N" userLabel="Drums Volume Label">
+                                        <rect key="frame" x="342" y="271" width="60" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hwf-BR-how" userLabel="Guitar Pan Knob" customClass="THOrangeControlKnob">
+                                        <rect key="frame" x="30" y="104" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="PlC-on-JdV"/>
+                                            <constraint firstAttribute="width" constant="70" id="Pre-g4-kPY"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="adjustPan:" destination="OS7-wn-BS9" eventType="valueChanged" id="O5v-gX-tei"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e28-d9-gx5" userLabel="Guitar Volume Knob" customClass="THOrangeControlKnob">
+                                        <rect key="frame" x="30" y="200" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="JGS-dU-4PZ"/>
+                                            <constraint firstAttribute="width" constant="70" id="eM2-7m-mcg"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="adjustVolume:" destination="OS7-wn-BS9" eventType="valueChanged" id="aBg-DW-cq3"/>
+                                        </connections>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JXT-qj-p8h" userLabel="Bass Pan Knob" customClass="THOrangeControlKnob">
+                                        <rect key="frame" x="186" y="104" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="Ot4-FF-FdB"/>
+                                            <constraint firstAttribute="width" constant="70" id="Sj7-kG-Qnb"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="adjustPan:" destination="OS7-wn-BS9" eventType="valueChanged" id="oVm-hZ-p7g"/>
+                                        </connections>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LsH-EJ-otB" userLabel="Bass Volume Knob" customClass="THOrangeControlKnob">
+                                        <rect key="frame" x="186" y="200" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="bAn-2T-hIe"/>
+                                            <constraint firstAttribute="width" constant="70" id="j8N-wJ-RQg"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="adjustVolume:" destination="OS7-wn-BS9" eventType="valueChanged" id="MpX-RE-77v"/>
+                                        </connections>
+                                    </view>
+                                    <view tag="2" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1xU-qx-tpS" userLabel="Drums Pan Knob" customClass="THOrangeControlKnob">
+                                        <rect key="frame" x="337" y="104" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="89V-sm-Y2b"/>
+                                            <constraint firstAttribute="width" constant="70" id="WOZ-gR-YbB"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="adjustPan:" destination="OS7-wn-BS9" eventType="valueChanged" id="RkU-nD-liU"/>
+                                        </connections>
+                                    </view>
+                                    <view tag="2" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bsw-al-j1a" userLabel="Drums Volume Knob" customClass="THOrangeControlKnob">
+                                        <rect key="frame" x="337" y="200" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="Don-Fa-5nn"/>
+                                            <constraint firstAttribute="width" constant="70" id="Nnf-6Z-BZj"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="adjustVolume:" destination="OS7-wn-BS9" eventType="valueChanged" id="Em1-EO-kEB"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1547002378" green="0.1547002378" blue="0.1547002378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="e28-d9-gx5" firstAttribute="top" secondItem="hwf-BR-how" secondAttribute="bottom" constant="26" id="3LO-L4-iHO"/>
+                                    <constraint firstItem="LsH-EJ-otB" firstAttribute="centerX" secondItem="JXT-qj-p8h" secondAttribute="centerX" id="3cs-iX-crI"/>
+                                    <constraint firstItem="JXT-qj-p8h" firstAttribute="centerX" secondItem="jJt-7q-TEK" secondAttribute="centerX" id="4cz-rq-gLU"/>
+                                    <constraint firstItem="LsH-EJ-otB" firstAttribute="top" secondItem="nI1-vn-r2h" secondAttribute="bottom" constant="3" id="78Y-Bk-yt7"/>
+                                    <constraint firstItem="WCC-9T-ErO" firstAttribute="leading" secondItem="HYa-up-tDB" secondAttribute="trailing" constant="94" id="8kN-i9-Whi"/>
+                                    <constraint firstItem="l0j-08-sre" firstAttribute="top" secondItem="1xU-qx-tpS" secondAttribute="bottom" constant="2" id="AY3-t1-g2F"/>
+                                    <constraint firstItem="WCC-9T-ErO" firstAttribute="centerX" secondItem="LsH-EJ-otB" secondAttribute="centerX" id="An2-Rk-HaM"/>
+                                    <constraint firstItem="1xU-qx-tpS" firstAttribute="centerX" secondItem="mZo-Gr-mKM" secondAttribute="centerX" id="D8t-6S-pi3"/>
+                                    <constraint firstItem="Bsw-al-j1a" firstAttribute="top" secondItem="1xU-qx-tpS" secondAttribute="bottom" constant="26" id="DIE-oG-BzL"/>
+                                    <constraint firstItem="nI1-vn-r2h" firstAttribute="top" secondItem="JXT-qj-p8h" secondAttribute="bottom" constant="2" id="Eq1-8T-4eo"/>
+                                    <constraint firstItem="Njc-hg-O3N" firstAttribute="leading" secondItem="WCC-9T-ErO" secondAttribute="trailing" constant="91" id="Eu8-LR-LH6"/>
+                                    <constraint firstItem="1xU-qx-tpS" firstAttribute="top" secondItem="mZo-Gr-mKM" secondAttribute="bottom" constant="30" id="Fax-xd-h27"/>
+                                    <constraint firstItem="Njc-hg-O3N" firstAttribute="top" secondItem="Bsw-al-j1a" secondAttribute="bottom" constant="1" id="J9G-Nd-1W8"/>
+                                    <constraint firstItem="jJt-7q-TEK" firstAttribute="top" secondItem="nY2-0g-orK" secondAttribute="top" constant="24" id="Ops-V9-eTN"/>
+                                    <constraint firstItem="l0j-08-sre" firstAttribute="centerX" secondItem="1xU-qx-tpS" secondAttribute="centerX" id="QAA-cd-ggM"/>
+                                    <constraint firstItem="hwf-BR-how" firstAttribute="centerX" secondItem="a4J-mr-yka" secondAttribute="centerX" id="RHJ-Qi-hfu"/>
+                                    <constraint firstItem="e28-d9-gx5" firstAttribute="centerX" secondItem="hwf-BR-how" secondAttribute="centerX" id="Vft-VI-x1c"/>
+                                    <constraint firstItem="nI1-vn-r2h" firstAttribute="centerX" secondItem="nY2-0g-orK" secondAttribute="centerX" id="Vhi-LH-xiH"/>
+                                    <constraint firstItem="HYa-up-tDB" firstAttribute="top" secondItem="e28-d9-gx5" secondAttribute="bottom" constant="1" id="YhT-w7-WaQ"/>
+                                    <constraint firstItem="nI1-vn-r2h" firstAttribute="leading" secondItem="WCC-9T-ErO" secondAttribute="leading" id="YtL-eo-ygZ"/>
+                                    <constraint firstItem="nI1-vn-r2h" firstAttribute="centerX" secondItem="JXT-qj-p8h" secondAttribute="centerX" id="ck4-LG-svA"/>
+                                    <constraint firstItem="jJt-7q-TEK" firstAttribute="leading" secondItem="a4J-mr-yka" secondAttribute="trailing" constant="76" id="dpF-TK-5bD"/>
+                                    <constraint firstItem="hwf-BR-how" firstAttribute="top" secondItem="a4J-mr-yka" secondAttribute="bottom" constant="24" id="dx1-RO-Qoc"/>
+                                    <constraint firstItem="mZo-Gr-mKM" firstAttribute="top" secondItem="nY2-0g-orK" secondAttribute="top" constant="29" id="erM-KY-Hpy"/>
+                                    <constraint firstItem="LsH-EJ-otB" firstAttribute="top" secondItem="JXT-qj-p8h" secondAttribute="bottom" constant="26" id="gm4-Rh-jNM"/>
+                                    <constraint firstItem="WCC-9T-ErO" firstAttribute="top" secondItem="LsH-EJ-otB" secondAttribute="bottom" constant="1" id="gsR-nu-Rt5"/>
+                                    <constraint firstItem="WCC-9T-ErO" firstAttribute="baseline" secondItem="Njc-hg-O3N" secondAttribute="baseline" id="lDn-TT-Ubr"/>
+                                    <constraint firstItem="nI1-vn-r2h" firstAttribute="baseline" secondItem="l0j-08-sre" secondAttribute="baseline" id="mwE-jU-5VR"/>
+                                    <constraint firstItem="Bsw-al-j1a" firstAttribute="centerX" secondItem="1xU-qx-tpS" secondAttribute="centerX" id="n4j-bN-vM3"/>
+                                    <constraint firstItem="HYa-up-tDB" firstAttribute="centerX" secondItem="e28-d9-gx5" secondAttribute="centerX" id="nOL-gy-PFs"/>
+                                    <constraint firstItem="Njc-hg-O3N" firstAttribute="centerX" secondItem="Bsw-al-j1a" secondAttribute="centerX" id="nur-fN-bcI"/>
+                                    <constraint firstItem="mZo-Gr-mKM" firstAttribute="leading" secondItem="jJt-7q-TEK" secondAttribute="trailing" constant="71" id="oIb-UF-fw1"/>
+                                    <constraint firstItem="nI1-vn-r2h" firstAttribute="baseline" secondItem="X3u-Hv-W1p" secondAttribute="baseline" id="oOg-ay-VkF"/>
+                                    <constraint firstItem="a4J-mr-yka" firstAttribute="top" secondItem="nY2-0g-orK" secondAttribute="top" constant="20" id="tm4-I0-Onb"/>
+                                    <constraint firstItem="X3u-Hv-W1p" firstAttribute="top" secondItem="hwf-BR-how" secondAttribute="bottom" constant="2" id="uSG-2i-4sL"/>
+                                    <constraint firstItem="X3u-Hv-W1p" firstAttribute="centerX" secondItem="hwf-BR-how" secondAttribute="centerX" id="uwE-h1-7tn"/>
+                                    <constraint firstItem="nI1-vn-r2h" firstAttribute="leading" secondItem="X3u-Hv-W1p" secondAttribute="trailing" constant="96" id="uzy-5s-Yse"/>
+                                    <constraint firstItem="l0j-08-sre" firstAttribute="leading" secondItem="nI1-vn-r2h" secondAttribute="trailing" constant="91" id="vlE-S6-bjv"/>
+                                    <constraint firstItem="JXT-qj-p8h" firstAttribute="top" secondItem="jJt-7q-TEK" secondAttribute="bottom" constant="29" id="yd5-KO-Qtc"/>
+                                    <constraint firstItem="WCC-9T-ErO" firstAttribute="baseline" secondItem="HYa-up-tDB" secondAttribute="baseline" id="zux-Xc-a38"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2197265625" green="0.2197265625" blue="0.2197265625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Dl-bs-G6D" secondAttribute="trailing" constant="6" id="4zs-Of-Dhm"/>
+                            <constraint firstItem="nY2-0g-orK" firstAttribute="leading" secondItem="O9V-LF-f3k" secondAttribute="leading" id="H8n-Xn-9Yh"/>
+                            <constraint firstItem="5Dl-bs-G6D" firstAttribute="top" secondItem="6jf-Fv-9Cg" secondAttribute="bottom" constant="65" id="Hbh-9m-nq3"/>
+                            <constraint firstItem="gSH-58-dAu" firstAttribute="top" secondItem="5Dl-bs-G6D" secondAttribute="bottom" constant="1" id="L6J-9L-Lur"/>
+                            <constraint firstItem="gSH-58-dAu" firstAttribute="centerX" secondItem="5Dl-bs-G6D" secondAttribute="centerX" id="NMR-zO-hbE"/>
+                            <constraint firstItem="Vym-nf-TCp" firstAttribute="top" secondItem="nY2-0g-orK" secondAttribute="bottom" id="OKq-0R-lFO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FIC-60-PSf" secondAttribute="trailing" constant="10" id="Xia-0x-0DD"/>
+                            <constraint firstItem="5Dl-bs-G6D" firstAttribute="centerX" secondItem="FIC-60-PSf" secondAttribute="centerX" id="Xyz-TK-X9y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nY2-0g-orK" secondAttribute="trailing" constant="106" id="eak-5w-5df"/>
+                            <constraint firstItem="FIC-60-PSf" firstAttribute="top" secondItem="gDo-Z0-THz" secondAttribute="bottom" constant="23" id="mhK-Dj-mnq"/>
+                            <constraint firstItem="6jf-Fv-9Cg" firstAttribute="centerX" secondItem="FIC-60-PSf" secondAttribute="centerX" id="sML-aU-Y8D"/>
+                            <constraint firstItem="nY2-0g-orK" firstAttribute="top" secondItem="O9V-LF-f3k" secondAttribute="top" id="wt4-Bn-dNR"/>
+                            <constraint firstItem="6jf-Fv-9Cg" firstAttribute="top" secondItem="FIC-60-PSf" secondAttribute="bottom" constant="1" id="xGL-QH-SkO"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="667" height="667"/>
+                    <connections>
+                        <outlet property="playButton" destination="FIC-60-PSf" id="5So-vr-o0n"/>
+                        <outlet property="playLabel" destination="6jf-Fv-9Cg" id="hOK-lv-RFH"/>
+                        <outlet property="rateKnob" destination="5Dl-bs-G6D" id="kTP-k3-RzC"/>
+                        <outletCollection property="panKnobs" destination="1xU-qx-tpS" collectionClass="NSMutableArray" id="bYC-wS-6hd"/>
+                        <outletCollection property="panKnobs" destination="JXT-qj-p8h" collectionClass="NSMutableArray" id="Kgn-gL-s3G"/>
+                        <outletCollection property="panKnobs" destination="hwf-BR-how" collectionClass="NSMutableArray" id="Uk6-eL-iTa"/>
+                        <outletCollection property="volumeKnobs" destination="Bsw-al-j1a" collectionClass="NSMutableArray" id="eln-Oe-J0n"/>
+                        <outletCollection property="volumeKnobs" destination="LsH-EJ-otB" collectionClass="NSMutableArray" id="jHu-0p-VY4"/>
+                        <outletCollection property="volumeKnobs" destination="e28-d9-gx5" collectionClass="NSMutableArray" id="5AE-lR-Z5j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7L4-Rr-VMp" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164" y="372"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bass" width="200" height="128"/>
+        <image name="drum" width="200" height="115"/>
+        <image name="guitar" width="200" height="151"/>
+    </resources>
+</document>

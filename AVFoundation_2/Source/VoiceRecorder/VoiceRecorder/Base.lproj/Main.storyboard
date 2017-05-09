@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gBb-Xa-gC5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="v57-9e-0WH">
+            <objects>
+                <viewController id="gBb-Xa-gC5" customClass="MainViewController" customModule="VoiceRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nUQ-sk-NVI"/>
+                        <viewControllerLayoutGuide type="bottom" id="NOp-oU-TSu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oif-qg-G9D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="ltY-WE-qlu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2W-Se-VJr" userLabel="Container">
+                                        <rect key="frame" x="76.5" y="19" width="222" height="162"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNy-cd-NmC" userLabel="Record/Pause Button">
+                                                <rect key="frame" x="20" y="71" width="71" height="71"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" image="record" backgroundImage="transport_bg">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="selected" image="pause"/>
+                                                <connections>
+                                                    <action selector="record:" destination="gBb-Xa-gC5" eventType="touchUpInside" id="s0Z-ZW-nBv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0P-UG-GUP" userLabel="Stop Button">
+                                                <rect key="frame" x="133" y="71" width="71" height="71"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" image="stop" backgroundImage="transport_bg">
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="stopRecording:" destination="gBb-Xa-gC5" eventType="touchUpInside" id="fZh-oe-4Km"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBS-12-0Bv" userLabel="Time Label">
+                                                <rect key="frame" x="53" y="20" width="117" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="162" id="Hqu-o3-GJQ"/>
+                                            <constraint firstAttribute="width" constant="222" id="NCz-hf-uXw"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wr-g9-oyz" customClass="LevelMeterView" customModule="VoiceRecorder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="190" width="375" height="10"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="pq7-DV-I43"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="5wr-g9-oyz" firstAttribute="top" secondItem="e2W-Se-VJr" secondAttribute="bottom" constant="9" id="4AA-lr-PFK"/>
+                                    <constraint firstAttribute="height" constant="200" id="Nvx-Zd-tnl"/>
+                                    <constraint firstItem="5wr-g9-oyz" firstAttribute="leading" secondItem="ltY-WE-qlu" secondAttribute="leading" id="ZHY-86-77R"/>
+                                    <constraint firstItem="e2W-Se-VJr" firstAttribute="centerY" secondItem="ltY-WE-qlu" secondAttribute="centerY" id="m1J-Yj-N7N"/>
+                                    <constraint firstItem="e2W-Se-VJr" firstAttribute="centerX" secondItem="ltY-WE-qlu" secondAttribute="centerX" id="okf-jz-nST"/>
+                                    <constraint firstAttribute="trailing" secondItem="5wr-g9-oyz" secondAttribute="trailing" id="sHL-Si-mzC"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="g4M-o7-m9v">
+                                <rect key="frame" x="0.0" y="199" width="375" height="468"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="kv9-Jx-NLc" customClass="MemoCell" customModule="VoiceRecorder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="22" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kv9-Jx-NLc" id="Xc3-26-1w5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRd-9U-XFU">
+                                                    <rect key="frame" x="25" y="11" width="240" height="21"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8j4-Ha-e7G">
+                                                    <rect key="frame" x="273" y="2" width="76" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="76" id="smq-9l-qQY"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcL-fb-3ef">
+                                                    <rect key="frame" x="273" y="20" width="76" height="21"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hcL-fb-3ef" firstAttribute="top" secondItem="Xc3-26-1w5" secondAttribute="topMargin" constant="12" id="02P-2G-GJe"/>
+                                                <constraint firstItem="zRd-9U-XFU" firstAttribute="top" secondItem="Xc3-26-1w5" secondAttribute="topMargin" constant="3" id="3vv-7q-mNF"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8j4-Ha-e7G" secondAttribute="bottom" constant="12" id="DXY-FT-8Tx"/>
+                                                <constraint firstItem="zRd-9U-XFU" firstAttribute="leading" secondItem="Xc3-26-1w5" secondAttribute="leadingMargin" constant="17" id="K3t-tL-ehv"/>
+                                                <constraint firstItem="hcL-fb-3ef" firstAttribute="trailing" secondItem="8j4-Ha-e7G" secondAttribute="trailing" id="Lqd-pt-S6W"/>
+                                                <constraint firstItem="8j4-Ha-e7G" firstAttribute="top" secondItem="Xc3-26-1w5" secondAttribute="topMargin" constant="-6" id="VrI-0y-p7c"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8j4-Ha-e7G" secondAttribute="trailing" constant="18" id="ede-Gx-lHZ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hcL-fb-3ef" secondAttribute="bottom" constant="-6" id="gTQ-iy-Q8c"/>
+                                                <constraint firstItem="zRd-9U-XFU" firstAttribute="centerY" secondItem="Xc3-26-1w5" secondAttribute="centerY" id="mHX-CU-ewM"/>
+                                                <constraint firstItem="8j4-Ha-e7G" firstAttribute="leading" secondItem="zRd-9U-XFU" secondAttribute="trailing" constant="8" symbolic="YES" id="vRb-PZ-Erh"/>
+                                                <constraint firstItem="8j4-Ha-e7G" firstAttribute="leading" secondItem="hcL-fb-3ef" secondAttribute="leading" id="xk9-gr-tja"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="8j4-Ha-e7G" id="oIe-o2-7I0"/>
+                                            <outlet property="timeLabel" destination="hcL-fb-3ef" id="HCJ-Lb-gNY"/>
+                                            <outlet property="titleLabel" destination="zRd-9U-XFU" id="sai-0q-Fr5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gBb-Xa-gC5" id="iPq-AA-xw7"/>
+                                    <outlet property="delegate" destination="gBb-Xa-gC5" id="Cjl-P2-Okm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ltY-WE-qlu" firstAttribute="top" secondItem="oif-qg-G9D" secondAttribute="top" id="EKZ-8v-VDr"/>
+                            <constraint firstAttribute="trailing" secondItem="ltY-WE-qlu" secondAttribute="trailing" id="KBC-zn-uv0"/>
+                            <constraint firstItem="g4M-o7-m9v" firstAttribute="leading" secondItem="oif-qg-G9D" secondAttribute="leading" id="any-BO-o1w"/>
+                            <constraint firstItem="ltY-WE-qlu" firstAttribute="leading" secondItem="oif-qg-G9D" secondAttribute="leading" id="cg0-RB-r8d"/>
+                            <constraint firstItem="NOp-oU-TSu" firstAttribute="top" secondItem="g4M-o7-m9v" secondAttribute="bottom" id="tkH-S4-sON"/>
+                            <constraint firstAttribute="trailing" secondItem="g4M-o7-m9v" secondAttribute="trailing" id="w43-op-flH"/>
+                            <constraint firstItem="g4M-o7-m9v" firstAttribute="top" secondItem="nUQ-sk-NVI" secondAttribute="bottom" constant="179" id="y6P-Ev-uis"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <connections>
+                        <outlet property="levelMeterView" destination="5wr-g9-oyz" id="NL2-W0-1dd"/>
+                        <outlet property="recordButton" destination="iNy-cd-NmC" id="ugy-Jb-3OP"/>
+                        <outlet property="stopButton" destination="P0P-UG-GUP" id="q4w-02-YFZ"/>
+                        <outlet property="tableView" destination="g4M-o7-m9v" id="H8L-Ad-pkw"/>
+                        <outlet property="timeLabel" destination="QBS-12-0Bv" id="eZb-lD-mab"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezg-Kd-vPP" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pause" width="26" height="26"/>
+        <image name="record" width="48" height="47"/>
+        <image name="stop" width="25" height="25"/>
+        <image name="transport_bg" width="71" height="70"/>
+    </resources>
+</document>
