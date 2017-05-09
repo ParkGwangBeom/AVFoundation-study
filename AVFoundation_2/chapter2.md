@@ -51,7 +51,7 @@
 - rate: 피치를 변경하지 않고 재생 속도를 제어하는 속성
 
 ### Controlling the Individual Tracks
-- pan : pan 조정 (-1 ~ 1)
+- pan : pan 조정 (-1 ~ 1) (패닝은 음악을 듣는 사람의 입장에서 어떤 악기가 좌측 혹은 우측 혹은 가운데에 위치하는지를 결정해주는 요소)
 
 ### Configuring the Audio Session
 - 어플리케이션에는 Solo Ambient라는 카테고리가 기본 오디오 세션으로 제공된다. <이 경우 옆 스위치를 잠금을 할 경우 오디오가 안나옴>
