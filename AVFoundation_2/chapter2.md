@@ -11,7 +11,8 @@
 
 ### Audio Session Categories
 - AVFoundation에서 오디오 동작을 설명하는 7가지 범주
-- 이미지
+<img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_2/Resource/AVAudioSession.png"/>
+
 - 좀 더 세부적인 제어가 필요한 경우 옵션 및 모드를 사용하여 일부 범주를 추가적으로 정의 할 수 있다.
     - 옵션 : 응용프로그램이 재생 범주를 사용하여 오디오 출력과 백그라운드에서 오디오 재생을 혼합 할 수 있는지 여부와 같이 범주에서 제공하는 선택적 동작을 활성화 할 수 있다.
     - 모드 : 특별한 유스 케이스에 맞는 동작을 도입하여 카테고리를 추가로 수정할 수 있다.
@@ -122,36 +123,3 @@
 - 오디오 미러링은 AVAudioRecorder, AVAudioPlayr에서 사용할 수 잇는 가장 강력하고 유용한 기능이다.
 - averagePowerForChannel, peakPowerForChannel 두 방법 모두 요청 된 전력 레벨을 나타내는 갑을 데시벨 단위로 반환 한다.
 - 미러링하여 데시벨 값을 읽기 위해서는 레코더의 meteringEnabled속성을 true로 해줘야 한다.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
