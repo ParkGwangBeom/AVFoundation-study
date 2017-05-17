@@ -81,6 +81,7 @@ class RecorderController: NSObject {
         do {
             try FileManager.default.copyItem(at: srcURL, to: destURL)
             hanlder(true, Memo.memo(title: name, url: destURL))
+            recorder?.prepareToRecord()
         } catch {
 //            hanlder(false, "")
         }
