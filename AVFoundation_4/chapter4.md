@@ -1,5 +1,7 @@
 # Playing Video
 
+<img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_4/Resource/AVPlayer.png"/>
+
 ## AVPlayer
 - AVPlayer는 시간이 지정된 오디오-동영상을 재생하는데 사용되는 컨트롤러 개체 <재생 및 타이밍을 관리>
 - HTTP 라이브 스트리밍, 다운로드 된 미디어 재생을 지원
@@ -20,7 +22,7 @@
 - AVPlayerItem에는 status 속성이 존재함. KVO를 통해 속성을 관찰
 - AVPlayerItemStatusUnknown에서 시작. (미디어가 로드되지 않았고 재생을 위해 대기열에 추가되지 않았음)
 - AVPlayerItemStatusReadyToPlay가 되야 재생이 가능함.
-- 
+
 ## Working with Time
 - 부동 소수점 유형으로 시간을 표현하는 것은 부동 소수점 연산이 근본적으로 부정확성을 초래할 수 있음.
 - AVFoundation은 CMTime이라는 데이터 구조를 기반으로 시간을 표현함.
