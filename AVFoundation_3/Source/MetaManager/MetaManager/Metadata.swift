@@ -10,7 +10,7 @@ import Cocoa
 import AVFoundation
 
 class Metadata: NSObject {
-    var name: String?
+    var name: NSString = ""
     var artist: String?
     var albumArtist: String?
     var album: String?
@@ -105,11 +105,13 @@ class Metadata: NSObject {
             
             if let data = value as? [String:Any] {
                 data.keys.forEach {
-                    self.setValue(data[$0], forKey:$0)
+                    self.setValue(data[$0], forKeyPath:$0)
                 }
             } else {
-                self.setValue(value, forKey: normalizedKey)
+                self.setValue(value, forKeyPath: normalizedKey)
             }
+
+            print(self.name)
         }
     }
     

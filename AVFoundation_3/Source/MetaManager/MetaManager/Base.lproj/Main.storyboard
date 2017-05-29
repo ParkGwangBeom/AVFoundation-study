@@ -686,14 +686,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="766" height="513"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNZ-tY-lHW">
+                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="36" horizontalPageScroll="10" verticalLineScroll="36" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNZ-tY-lHW">
                                 <rect key="frame" x="20" y="42" width="240" height="443"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" ambiguous="YES" id="XOE-Uk-TcH">
                                     <rect key="frame" x="1" y="0.0" width="238" height="442"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="pLN-lq-aNS" viewBased="YES" id="trE-Hm-1is">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="34" rowSizeStyle="automatic" headerView="pLN-lq-aNS" viewBased="YES" id="trE-Hm-1is">
                                             <rect key="frame" x="0.0" y="0.0" width="238" height="419"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -738,7 +738,7 @@
                                                 </tableColumn>
                                             </tableColumns>
                                             <connections>
-                                                <binding destination="3we-7z-2Lt" name="content" keyPath="arrangedObjects" id="1md-eO-O94"/>
+                                                <binding destination="XfG-lQ-9wD" name="content" keyPath="self.mediaItems" id="e8c-xJ-i2C"/>
                                                 <outlet property="dataSource" destination="XfG-lQ-9wD" id="2jz-rn-Dmf"/>
                                                 <outlet property="delegate" destination="XfG-lQ-9wD" id="w4K-s5-ea8"/>
                                             </connections>
@@ -746,7 +746,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="0Ma-Pf-Ho1">
-                                    <rect key="frame" x="1" y="426" width="238" height="16"/>
+                                    <rect key="frame" x="1" y="7" width="0.0" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="r8E-m2-r25">
@@ -777,7 +777,11 @@
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                     <connections>
-                                                        <binding destination="3we-7z-2Lt" name="value" keyPath="selection.metadata.name" id="clw-hz-GC0"/>
+                                                        <binding destination="3we-7z-2Lt" name="value" keyPath="selection.metadata.name" id="Zq5-d3-eBD">
+                                                            <dictionary key="options">
+                                                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                            </dictionary>
+                                                        </binding>
                                                         <outlet property="delegate" destination="XfG-lQ-9wD" id="xy9-sV-DDy"/>
                                                     </connections>
                                                 </textField>
@@ -1050,19 +1054,6 @@
                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
-                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aui-Ec-oi7">
-                                                    <rect key="frame" x="12" y="63" width="446" height="64"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                    <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ALt-9w-q8K">
-                                                        <font key="font" metaFont="system"/>
-                                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                    </textFieldCell>
-                                                    <connections>
-                                                        <binding destination="3we-7z-2Lt" name="value" keyPath="selection.metadata.comments" id="6It-U4-9HP"/>
-                                                        <outlet property="delegate" destination="XfG-lQ-9wD" id="vud-OA-Eq6"/>
-                                                    </connections>
-                                                </textField>
                                                 <comboBox verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVK-PV-qKO">
                                                     <rect key="frame" x="12" y="17" width="261" height="26"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1093,13 +1084,26 @@
                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
+                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aui-Ec-oi7">
+                                                    <rect key="frame" x="12" y="63" width="446" height="64"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ALt-9w-q8K">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <connections>
+                                                        <binding destination="3we-7z-2Lt" name="value" keyPath="selection.metadata.comments" id="6It-U4-9HP"/>
+                                                        <outlet property="delegate" destination="XfG-lQ-9wD" id="vud-OA-Eq6"/>
+                                                    </connections>
+                                                </textField>
                                             </subviews>
                                         </view>
                                     </tabViewItem>
                                 </tabViewItems>
                             </tabView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cw3-dh-iqF">
-                                <rect key="frame" x="655" y="-2" width="100" height="43"/>
+                                <rect key="frame" x="655" y="-2" width="100" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2Us-XD-QRx">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
