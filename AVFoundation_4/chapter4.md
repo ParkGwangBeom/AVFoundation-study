@@ -1,13 +1,15 @@
 # Playing Video
 
+<img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_4/Resource/AVPlayer.png"/>
+
 ## AVPlayer
 - AVPlayer는 시간이 지정된 오디오-동영상을 재생하는데 사용되는 컨트롤러 개체 <재생 및 타이밍을 관리>
 - HTTP 라이브 스트리밍, 다운로드 된 미디어 재생을 지원
-- AVPlayer는 비시각적 요소이다. 비디오 출력을 사용자 인터페이스 대상으로 보내려면 AVPlayerLayer라는 클래스를 사용한다.
+- AVPlayer는 비시각적 요소. 비디오 출력을 사용자 인터페이스 대상으로 보내려면 AVPlayerLayer라는 클래스를 사용.
 
 ## AVPlayerLayer
 - AVPlayerLayer는 CALayer 클래스를 확장하고 비디오 내용을 화면에 랜더링 하는데 사용됨
-- 커스터마이징 가능한 부분은 VideoGravity이다. 레이어의 경계 내에서 비디오를 늘리거나 크기를 조절 할 수 있다. <AVLayerVideoGravityResizeAspect, AVLayerVideoGravityResizeAspectFill, AVLayerVideoGravityResize>
+- 커스터마이징 가능한 부분은 VideoGravity이다. 레이어의 경계 내에서 비디오를 늘리거나 크기를 조절 할 수 있음. <AVLayerVideoGravityResizeAspect, AVLayerVideoGravityResizeAspectFill, AVLayerVideoGravityResize>
 
 ## AVPlayerItem
 - AVAsset은 정적측면(메타 데이터 등)을 나타내기 때문에 재생에 적합하지 않음. 그러므로 관련 트랙을 재생하기 위해서는 AVPlayerItem 및 AVPlayerItemTrack 클래스에서 제공하는 동적 요소를 구성해야 함.
@@ -16,11 +18,11 @@
 - AVPlayerItem에서 발견된 트랙은 AVAsset안에 있는 AVAssetTrack과 일치함.
 
 ## Playback Recipe
-- AVPlayerItem을 통해서 playerLayer를 만들고 item자체를 통해서 layer를 통제한다. ??
+- AVPlayerItem을 통해서 playerLayer를 만들고 item자체를 통해서 layer를 통제함. ??
 - AVPlayerItem에는 status 속성이 존재함. KVO를 통해 속성을 관찰
 - AVPlayerItemStatusUnknown에서 시작. (미디어가 로드되지 않았고 재생을 위해 대기열에 추가되지 않았음)
 - AVPlayerItemStatusReadyToPlay가 되야 재생이 가능함.
-- 
+
 ## Working with Time
 - 부동 소수점 유형으로 시간을 표현하는 것은 부동 소수점 연산이 근본적으로 부정확성을 초래할 수 있음.
 - AVFoundation은 CMTime이라는 데이터 구조를 기반으로 시간을 표현함.
@@ -41,7 +43,7 @@ let fiveSeconds = CMTimeMake(5, 1) // 5초
 
 ## Building a Video Player
 ## Creating the Video Controller
-- AVPlayerItem에 initWithAsset: automaticallyLoadedAssetKeys:를 사용하게 되면 asset의 속성들을 자동으로 로드할 수 있다.
+- AVPlayerItem에 initWithAsset: automaticallyLoadedAssetKeys:를 사용하게 되면 asset의 속성들을 자동으로 로드할 수 있음.
 
 ## Observing Status Changes
 - AVFoundation에서 avplayer에 옵저빙을 할 경우 상태값의 변경을 알리기 위해 어떠한 쓰레드에서 할지 모르므로 메인스레드를 사용하도록 명시 해줘야 함.
@@ -50,7 +52,7 @@ let fiveSeconds = CMTimeMake(5, 1) // 5초
 - AVPlayer에서 KVO를 이용하여 시간변경을 관찰하는 것은 유용하지 않음. <너무 빈번하게 일어나므로 정밀함이 필요함.>
 
 ### Periodic Time Observation
-- 가장 일반적으로 정기적으로 시간을 알리는 것이다.
+- 가장 일반적으로 정기적으로 시간을 알리는 것.
 - AVPlayer의 addPeriodicTimeObserverForInterval: queue: usingBlock: 메소드를 사용.
     - interval: 알림을 받아야 하는 주기적인 시간간격
     - queue: 알림을 게시해야 하는 시리얼 큐 (콘커런트 큐를 사용할 경우 예상치 못한 동작이 발생)
