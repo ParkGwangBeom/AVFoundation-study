@@ -3,6 +3,7 @@
 
 ## Capture Overview
 - 코어 캡쳐 클래스는 ios와 osx에서 일관됨. 하지만 ios의 경우 샌드박스 제한으로 인해 AVCaptureScreenInput 클래스를 제공하지 않음.
+<img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_6/Resource/AVCapture.png"/>
 
 ## Capture Session
 - 입출력이 연결된 가상 ‘patch bay’역할을 함. (카메라 및 마이크와 같은 물리적 장치에서 하나 이상의 출력 대상으로의 데이터 흐름을 제어)
