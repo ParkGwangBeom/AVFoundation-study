@@ -131,9 +131,11 @@ if status == .denied {
 
 ## Capturing Videos
 - 일반적으로 QuickTime 동영상을 배포할 준비가 되면 헤더 메타데이터는 파일 시작부분에 배치되지만 캡처될때에는 녹음이 중단 된 후, 헤더가 생성되어 파일의 끝에 추가됨.
+<img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_6/Resource/Header.png"/>
 - 위와같이 헤더가 끝에 생성될 경우 전화가 와서 중단이 될 경우 헤더가 제대로 기록되지 않아 디스크에 읽을 수 없는 파일이 남음. AVCaptureMovieFileOutput은 조각으로 영상을 캡쳐하여 해결할 수 있음.
 - AVCaptureMovieFileOutput은 녹음이 시작되면 파일의 시작부분에서 최소 헤더가 쓰여지고 진행됨에 따라 주기적으로 조각이 완성되어 헤더를 완성시킴. 기본적으로 10초마다 기록되지만 movieFragmentInterval 속성을 수정하여 변경이 가능함.
 - enablesVideoStabilizationWhenAvailable 사용시 녹화된 비디오 품질을 크게 향상 시킬수 있음. (비디오 미리보기 화면에는 표시 안됨)
+<img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_6/Resource/Capture.png"/>
 - 부드러운 초점 모드를 사용할 경우 초점을 맞추는 속도가 느려짐. 일반적으로 카메라는 샷을 패닝할 때 자도으로 초점을 잡으려고 하는데 이는 펄싱 효과를 유발할 수 있음. 초점을 부드럽게 하면 이러한 초점 작업이 발생하는 속도가 느려지고 더 자연스러운 비디오를 제공함.
 - 비디오를 캡처할 경우 비디오가 기록될수 있는지 여부를 체크해야함. (videoAtPathIsCompatibleWithSavedPhotosAlbum 메소드)
 
