@@ -5,3 +5,4 @@
 3. [Working with Assets and Metadata](https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_3/chapter3.md)
 4. [Playing Video](https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_4/chapter4.md)
 5. [Using AV Kit](https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_5/chapter5.md)
+6. [Capturing Media](https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_6/chapter6.md)
