@@ -99,8 +99,11 @@ dispatch_queue_t dispatchQueue =
     }
 
     if (complete) {
+        // 쓰기 세션 마무리
         [self.assetWriter finishWritingWithCompletionHandler:^{
             AVAssetWriterStatus status = self.assetWriter.status;
+            
+            //status 속성을 쿼리하여 작성 세션의 완료, 실패, 취소 여부 확인 가능
             if (status == AVAssetWriterStatusCompleted) {
                 // Handle success case
             } else {
