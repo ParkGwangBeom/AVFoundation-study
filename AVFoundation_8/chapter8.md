@@ -8,10 +8,7 @@
 ### AVAssetReader
 - AVAssetReader는 AVAsset의 인스턴스에서 미디어 샘플을 읽는데 사용됨.
 - 하나 이상의 AVAssetReaderOutput 객체로 구성되어 copyNextSampleBuffer 메소드를 통해 오디오 샘플 및 비디오 프레임에 대한 접근을 제공함.
-
-```Objective-c
-AVAssetReader는 단일 Asset에 포함된 미디어 샘플만 지정 가능함. 동시에 여러 파일 기반 Asset 샘플을 읽어야 하는 경우 AVComposition 클래스를 이용하여 샘플을 구성 할 수 잇음.
-```
+- AVAssetReader는 단일 Asset에 포함된 미디어 샘플만 지정 가능함. 동시에 여러 파일 기반 Asset 샘플을 읽어야 하는 경우 AVComposition 클래스를 이용하여 샘플을 구성 할 수 잇음.
 
 ### AVAssetWriter
 - AVAssetReader에 상응하여 미디어를 인코딩하고 기록하는 사용됨.
