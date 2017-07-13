@@ -21,7 +21,7 @@
 
 ### Reading and Writing Example
 ```Objective-c
-“AVAsset *asset = // Asynchronously loaded video asset
+AVAsset *asset = // Asynchronously loaded video asset
 AVAssetTrack *track =
     [[asset tracksWithMediaType:AVMediaTypeVideo] firstObject];
 
