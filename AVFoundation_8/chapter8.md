@@ -4,6 +4,7 @@
 
 ### Overview
 - AVFoundation은 광범위한 기능을 제공함.
+<img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_8/Resource/ReadWriter.png"/>
 
 ### AVAssetReader
 - AVAssetReader는 AVAsset의 인스턴스에서 미디어 샘플을 읽는데 사용됨.
