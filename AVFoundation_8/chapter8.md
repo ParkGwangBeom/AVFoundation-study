@@ -113,3 +113,22 @@ dispatch_queue_t dispatchQueue =
     }
 }];
 ```
+
+### Building an Audio Waveform View
+오디오 파형을 그리기 위한 기본 세가지 주요 단계
+1. Read: 렌더링 할 오디오 샘플 읽기
+2. Reduce: 읽는 샘플의 수는 화면상에 렌더링 할 수 있는 것보다 훨씬 많기 때문에 감소 과정을 거쳐야함.  이 프로세스는 샘플의 총 수를 샘플의 " bins”으로 분할하고, 샘플의 전체 샘플, 샘플의 평균 샘플 또는 중간 크기의 샘플을 찾기 위해 각 샘플을 분할함.
+3. Render: 축소된 샘플을 가져와 화면에 랜더링함. 일반적으로 Quartz로 수행하지만 애플에서 지원하는 드로잉 프레임 워크를 사용 할수 있음.
+
+### Reading the Audio Samples
+- asset에서 오디오 샘플을 읽을 때 CMSampleBuffer로 작업함.
+- CMSampleBuffer의 오디오 샘플은 CMBlockBuffer라는 형식으로 포함됨. 이는 CMSampleBufferGetDataBuffer 함수를 사용하여 블록 버퍼에 엑세스함.
+- 샘플 버퍼가 처리되면 CMSampleBufferInvalidate 함수를 이용하여 나중에 다시 사용되지 못하도록 막아야 함.
+
+### Reducing the Audio Samples
+- THSampleDataProvider는 오디오 자산에서 전체 샘플을 추출함.
+- 이는 매우 많은 양이기 때문에 화면에 그려지는 값보다 많음. 그러기 때문에 필터 작업을 수행해야 함.
+- 오디오 샘플로 작업할 때에는 항상 바이트 순서를 기억해야 되므로 CFSwapInt16LittleToHost 함수를 사용하여 샘플이 호스트의 기본 바이트 순서로 되어 있는지 확인해야함.
+
+### Rendering the Audio Samples
+- 샘플코드에 주석으로 내용 적음... (코어그래픽을 활용하여 알맞게 draw 해주는 코드임...)
