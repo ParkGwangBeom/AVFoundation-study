@@ -128,7 +128,7 @@ dispatch_queue_t dispatchQueue =
 
 ### Reducing the Audio Samples
 - THSampleDataProvider는 오디오 자산에서 전체 샘플을 추출함.
-- 이는 매우 많은 양이기 때문에 화면에 그려지는 값보다 많음. 그러기 때문에 필터 작업을 수행해야 함.
+- 이는 매우 많은 양이기 때문에 화면에 그려지는 값보다 많음. 그렇기 때문에 필터 작업을 수행해야 함.
 - 오디오 샘플로 작업할 때에는 항상 바이트 순서를 기억해야 되므로 CFSwapInt16LittleToHost 함수를 사용하여 샘플이 호스트의 기본 바이트 순서로 되어 있는지 확인해야함.
 
 ### Rendering the Audio Samples
