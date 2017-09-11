@@ -133,3 +133,14 @@ dispatch_queue_t dispatchQueue =
 
 ### Rendering the Audio Samples
 - 샘플코드에 주석으로 내용 적음... (코어그래픽을 활용하여 알맞게 draw 해주는 코드임...)
+
+### Advanced Capture Recording
+
+- AVCaptureVideoDataOutput를 사용하면 AVCaptureMovieFileOutput의 편리함을 잃어 출력을 기록함.
+- AVCaptureVideoDataOutput에서 alwaysDiscardsLateVideoFrames속성을 NO로 설정 시 샘플버퍼를 처리하는 추가시간이 보장되지만 메모리 소비량이 증가 할 수 있음.
+- AVAssetWriterInput 실시간 사용을 위해 최적화해야 함을 나타내려면 expectsMediaDataInRealTime속성을 YES로 설정해야함.
+
+Summary
+- AVAssetReader, AVAssetWriter는 강력한 기능을 가짐.
+- CMSampleBuffer 레벨에서 미디어 작업을 하면 복잡성이 높아지지만 고급기능을 구현이 가능함.
+
