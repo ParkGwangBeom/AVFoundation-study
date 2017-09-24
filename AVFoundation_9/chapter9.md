@@ -4,12 +4,11 @@
 
 ## Composing Media
 - 여러 영상을 하나의 영상으로 결합 하려면 원본 미디어에서 관련 세그먼트를 추출하여 임시 배열로 구성해야 함.
-이미지
+<img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_9/Resource/AV_9_1.png"/>
 
 - AVFoundation의 구성 기능은 AVComposition이라는 AVAsset의 하위 클래스를 중심으로 구성된다.
 - 컴포지션은 다른 미디어 자산을 맞춤 시간 배열로 결합하여 단일 미디어 항목으로 제시하거나 처리할 수 있도록 함.
-
-이미지
+<img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_9/Resource/AV_9_2.png"/>
 - AVComposition은 AVAsset을 확장하므로 재생, 이미지 추출 또는 내보내기와 같은 일반 자산을 사용하는 모든 시나리오에서 사용할 수 있음.
 - AVAsset이 특정 미디어 파일에 직접 일대일 매핑을 하는 반면 컴포지션은 미디어의 여러 소스를 일괄적으로 제시하거나 처리하는 방법과 비슷함.
 
