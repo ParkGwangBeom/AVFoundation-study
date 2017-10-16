@@ -2,7 +2,7 @@
 
 ## Overview
 - AVFoundation에서는 애니메이션 비디오 전환 기술에 대한 강력한 지원을 제공함
-// 이미지
+<img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_11/Resource/im1.png"/>
 
 ## AVVideoComposition
 - 비디오 전환 api의 중심 클래스
@@ -25,12 +25,12 @@ AVVideoComposition은 AVComposition의 서브 클래스가 아니며 관련이 �
 ## Conceptual Steps
 
 ### 1 Stagger the Video Layout
-// 이미지
-// 이미지
+<img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_11/Resource/im2.png"/>
+<img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_11/Resource/im3.png"/>
 ### 2 Define Overlapping Regions
-// 이미지
+<img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_11/Resource/im4.png"/>
 ### 3 Calculate Pass-Through and Transition Time Ranges
-// 이미지
+<img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_11/Resource/im5.png"/>
 - 컴포지션의 시간 범위를 정하기 위해 두가지 유형의 시간 범위를 계산해야함
 - Pass-Through: 이 시간 범위 동안 한 트랙의 전체 프레임이 다른 프레임과 블렌딩 없이 전달되도록 해야함
 - Transition: 비디오 세그먼트가 겹쳐지고 타임 라인에서 전환 효과가 적용될 영역을 표시하는 컴포지션의 시간 범위를 정의함
