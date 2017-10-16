@@ -25,10 +25,13 @@ AVVideoComposition은 AVComposition의 서브 클래스가 아니며 관련이 �
 ## Conceptual Steps
 
 ### 1 Stagger the Video Layout
+
 <img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_11/Resource/im2.png"/>
 <img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_11/Resource/im3.png"/>
+
 ### 2 Define Overlapping Regions
 <img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_11/Resource/im4.png"/>
+
 ### 3 Calculate Pass-Through and Transition Time Ranges
 <img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_11/Resource/im5.png"/>
 - 컴포지션의 시간 범위를 정하기 위해 두가지 유형의 시간 범위를 계산해야함
