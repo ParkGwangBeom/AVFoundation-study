@@ -9,17 +9,18 @@
 - 비디오 으용프로그램에 대한 오버레이 효과를 만드는 것은 ios용 실시간 애니메이션을 제작하는 것과 거의 동일함.
 - 가장 큰 차이점은 애니메이션을 실행하는데 사용되는 타이밍 모델에 있음.
 - 호스트 시간의 경우 시스템 부팅에서 시작하여 앞으로 무한대로 단조롭게 진행됨. 이는 기본 애니메이션 동작에는 적합함. 하지만 비디오 애니메이션은 영화 시작부분에서 시작하여 지속시간까지 실행해야 하므로 호스트 시간은 부적합함.
-이미지
+<img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_12/Resource/ca1.png"/>
 
 ## Playback with AVSynchronizedLayer
 - AVFoundation은 AVPlayerItem의 타이밍을 동기화하는 AVSynchronizedLayer라는 CALayer 서브 클래스를 제공함.
 - 이 레이어는 콘텐츠를 표시하는데 사용하지 않고 단순히 타이밍을 레이어 하위 트리에 부여하는데 사용됨.
-이미지
-이미지
+<img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_12/Resource/ca2.png"/>
+<img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_12/Resource/ca3.png"/>
 
 ## Exporting with AVVideoCompositionCoreAnimationTool
 - 비디오의 core animation 레이어와 애니메이션을 통합하려면 AVVideoCompositionCoreAnimationTool을 사용함. 이 클래스는 AVVideoComposition에서 core animation 효과를 비디오 합성 후 처리 단계를 통합하는데 사용됨
-이미지
+<img src="https://github.com/ParkGwangBeom/AVFoundation-study/blob/master/AVFoundation_12/Resource/ca4.png"/>
+
 - 오버레이 효과를 만들 때 관찰해야 할 사항
 - removedOnCompletion 속성을 NO로 해야함
 - beginTime이 0.0인 애니메이션은 보이지 않음.  core animation은 beginTime을 0.0으로 변환하여 현재 호스트 시간인 CACurrentMediaTime()을 영화의 타임 라인에 유효한 시간과 일치시키지 않음. 그러므로 동영상 맨 처음부터 애니메이션을 시작해야 하는 경우 AVCoreAnimationBeginTimeAtZero를 사용해야함.
